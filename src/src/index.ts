@@ -1,11 +1,21 @@
-/**
- * This file is just a silly example to show everything working in the browser.
- * When you're ready to start on your site, clear the file. Happy hacking!
- **/
+import {define, html, Hybrids} from 'hybrids';
 
-import confetti from 'canvas-confetti';
+interface SimpleCounter extends HTMLElement {
+    count: number;
+}
 
-confetti.create(document.getElementById('canvas') as HTMLCanvasElement, {
-  resize: true,
-  useWorker: true,
-})({ particleCount: 200, spread: 200 });
+
+export function increaseCount(host: SimpleCounter) {
+  host.count += 1;
+}
+
+export const SimpleCounter: Hybrids<SimpleCounter> = {
+  count: 0,
+  render: ({ count }) => html`
+    <button onclick="${increaseCount}">
+      Count: ${count}
+    </button>
+  `,
+};
+
+define('simple-counter', SimpleCounter);
