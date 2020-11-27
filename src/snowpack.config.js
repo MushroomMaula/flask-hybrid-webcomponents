@@ -1,15 +1,11 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
   mount: {
+    assets: '/assets',
     public: '/',
     src: '/_dist_',
   },
-  plugins: [
-    ['@snowpack/plugin-typescript'],
-    /*["@snowpack/plugin-webpack", {
-    sourceMap: true
-    }]*/
-  ],
+  plugins: ['@snowpack/plugin-typescript'],
   install: [
     /* ... */
   ],
@@ -20,7 +16,7 @@ module.exports = {
     /* ... */
   },
   buildOptions: {
-    out: "../static/build"
+    /* ... */
   },
   proxy: {
     /* ... */
