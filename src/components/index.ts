@@ -1,3 +1,7 @@
+/*
+Create components in this folder
+Import them here
+ */
 import {define, html, Hybrids} from 'hybrids';
 
 interface SimpleCounter extends HTMLElement {
