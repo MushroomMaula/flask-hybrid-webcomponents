@@ -2,7 +2,7 @@
 module.exports = {
   mount: {
     public: '/../templates',
-    src: '/js',
+    components: '/js',
     assets: '/assets'
   },
   plugins: [
