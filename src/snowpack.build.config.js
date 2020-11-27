@@ -7,6 +7,7 @@ module.exports = {
   },
   plugins: [
     ['@snowpack/plugin-typescript'],
+     ['./flask-snowpack-plugin.js', {folder: 'static', included: ['index.html']}]
     /*["@snowpack/plugin-webpack", {
     sourceMap: true
     }]*/
