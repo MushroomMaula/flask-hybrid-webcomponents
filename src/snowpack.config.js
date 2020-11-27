@@ -3,7 +3,7 @@ module.exports = {
   mount: {
     assets: '/assets',
     public: '/',
-    src: '/_dist_',
+    src: '/js',
   },
   plugins: ['@snowpack/plugin-typescript'],
   install: [
