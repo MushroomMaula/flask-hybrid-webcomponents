@@ -45,13 +45,11 @@ function main (snowpackConfig, pluginOptions) {
         for (const tag of document.querySelectorAll('[src]')) {
           const attr = getNewAttribute(tag, 'src', pluginOptions.folder);
           tag.setAttribute('src', attr);
-          console.log(tag);
         }
         // Change all href attributes
         for (const tag of document.querySelectorAll('[href]')) {
           const attr = getNewAttribute(tag, 'href', pluginOptions.folder);
           tag.setAttribute('href', attr);
-          console.log(tag);
         }
 
         // return the updated html file
