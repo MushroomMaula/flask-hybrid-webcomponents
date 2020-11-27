@@ -6,9 +6,9 @@ module.exports = {
   },
   plugins: [
     ['@snowpack/plugin-typescript'],
-    ["@snowpack/plugin-webpack", {
+    /*["@snowpack/plugin-webpack", {
     sourceMap: true
-    }]
+    }]*/
   ],
   install: [
     /* ... */
