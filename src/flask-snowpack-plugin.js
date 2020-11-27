@@ -8,8 +8,8 @@ const path = require('path');
  */
 function getNewAttribute(tag, attr, folder) {
   let value = tag.getAttribute(attr);
-  if (!value.startsWith('/')) {
-    value = '/' + value
+  if (value.startsWith('/')) {
+    value = value.replace('/', '')
   }
   return `{{ url_for('${folder}', filename='${value}') }}`;
 }
